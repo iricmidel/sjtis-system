@@ -63,13 +63,13 @@
               Settings
             </p>
             <ul class="menu-list">
-              <li><a class="is-active" href="./">Grade And Section</a></li>
-              <li><a href="../Subject/">Subject</a></li>
+              <li><a href="../GradeAndSection">Grade And Section</a></li>
+              <li><a class="is-active"  href="./">Subject</a></li>
             </ul>
           </aside>
         </div>
 
-        <div class="column is-9"> <!-- MANAGE GRADE LEVEL AND SECTION -->
+        <div class="column is-9"> <!-- MANAGE SUBJECT -->
 
           <section class="hero is-info welcome is-small">
             <div class="hero-body">
@@ -84,21 +84,55 @@
             </div>
           </section>
 
-          <div class="columns">
+          <div class="columns is-gapless">
 
-            <div class="column is-6"> <!-- MANAGE GRADE LEVEL -->
+            <div class="column is-12"> <!-- ADD/VIEW SUBJECT -->
 
               <div class="card">
 
                 <header class="card-header">
-                  <p class="card-header-title">Grade Level</p>
+                  <p class="card-header-title">Subject</p>
                 </header>
 
                 <div class="card-content">
 
-                  <div class="columns is-variable is-1"> <!--ADD GRADE LEVEL -->
+                  <div class="columns is-variable is-1"> <!--ADD SUBJECTS -->
 
-                    <div class="column is-12">
+                    <div class="column is-2">
+
+                      <div class="field">
+                        <label class="label">Subject Code</label>
+                        <div class="control">
+                          <input class="input" type="text" placeholder="Subject Code">
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="column is-4 ">
+
+                      <div class="field">
+                        <label class="label">Subject Description</label>
+                        <div class="control">
+                          <input class="input" type="text" placeholder="Subject Description">
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="column is-2">
+
+                      <div class="field">
+                        <label class="label">Units</label>
+                        <div class="control">
+                          <input class="input" type="text" placeholder="Units">
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="column is-3">
+
                       <div class="fields">
 
                         <label class="label">Grade Level</label>
@@ -107,9 +141,13 @@
 
                           <div class="column is-10"> <!-- GRADE LEVEL -->
 
-                            <div class="field">
-                              <div class="control">
-                                <input class="input" type="text" placeholder="Grade Level">
+                            <div class="control">
+                              <div class="select is-fullwidth">
+                                <select>
+                                  <option selected>Grade 1</option>
+                                  <option>Grade 2</option>
+                                  <option>Grade 3</option>
+                                </select>
                               </div>
                             </div>
 
@@ -130,8 +168,8 @@
 
                       </div>
 
-                    </div>
 
+                    </div>
 
                   </div>
 
@@ -148,8 +186,11 @@
                             <tr>
 
                               <th>#</th>
+                              <th>Code</th>
+                              <th>Description</th>
+                              <th>Units</th>
                               <th>Grade Level</th>
-                              <th>Actions</th>
+                              <th>Action</th>
 
                             </tr>
 
@@ -159,199 +200,10 @@
 
                             <tr >
                               <td>1</td>
-                              <td>RM 201</td>
-                              <td>
-
-                                <a class="button is-success is-outlined">
-                                  <span class="icon is-small">
-                                    <i class="fa fa-pencil"></i>
-                                  </span>
-                                </a>
-
-                                <a class="button is-danger is-outlined">
-                                  <span class="icon is-small">
-                                    <i class="fa fa-trash"></i>
-                                  </span>
-                                </a>
-
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td>2</td>
-                              <td>RM 202</td>
-                              <td>
-
-                                <a class="button is-success is-outlined">
-                                  <span class="icon is-small">
-                                    <i class="fa fa-pencil"></i>
-                                  </span>
-                                </a>
-
-                                <a class="button is-danger is-outlined">
-                                  <span class="icon is-small">
-                                    <i class="fa fa-trash"></i>
-                                  </span>
-                                </a>
-
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td>3</td>
-                              <td>RM 203</td>
-                              <td>
-
-                                <a class="button is-success is-outlined">
-                                  <span class="icon is-small">
-                                    <i class="fa fa-pencil"></i>
-                                  </span>
-                                </a>
-
-                                <a class="button is-danger is-outlined">
-                                  <span class="icon is-small">
-                                    <i class="fa fa-trash"></i>
-                                  </span>
-                                </a>
-
-                              </td>
-                            </tr>
-
-                          </tbody>
-
-                        </table>
-
-                      </div>
-
-
-                    </div>
-
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="column is-6"> <!-- MANAGE SECTION -->
-
-              <div class="card">
-
-                <header class="card-header">
-                  <p class="card-header-title">Sections</p>
-                </header>
-
-                <div class="card-content">
-
-                  <div class="columns is-variable is-1"> <!--ADD SECTION -->
-
-                    <div class="column is-6">
-
-                      <div class="field">
-
-                        <label class="label">Section Name</label>
-
-                        <div class="control">
-                          <input class="input" type="text" placeholder="Section Name">
-                        </div>
-
-                      </div>
-
-                    </div>
-
-                    <div class="column is-6">
-
-                      <div class="field">
-
-                        <label class="label">Room Name</label>
-
-                        <div class="control">
-                          <input class="input" type="text" placeholder="Room Name">
-                        </div>
-
-                      </div>
-
-                    </div>
-
-
-                  </div>
-
-                  <div class="columns is-variable is-1"> <!--ADD SECTION GRADE LEVEL -->
-
-                    <div class="column is-12">
-                      <div class="fields">
-
-                        <label class="label">Grade Level</label>
-
-                        <div class="columns is-variable is-1">
-
-                          <div class="column is-10"> <!-- GRADE LEVEL -->
-
-                            <div class="field">
-                              <div class="control">
-                                <div class="select is-fullwidth">
-                                  <select>
-                                    <option>Grade 1</option>
-                                    <option>Grade 2</option>
-                                    <option>Grade 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-
-                          </div>
-
-                          <div class="column is-1"> <!--ADD BUTTON -->
-
-                            <a class="button is-outlined">
-                              <span class="icon is-small">
-                                <i class="fa fa-plus"></i>
-                              </span>
-                              <span>Add</span>
-                            </a>
-
-                          </div>
-
-                        </div>
-
-                      </div>
-
-                    </div>
-
-
-                  </div>
-
-                  <div class="columns is-variable is-1"> <!-- SECTION LIST -->
-
-                    <div class="column is-12">
-
-                      <div class="column is-12">
-
-                        <table class="table is-hoverable is-striped is-fullwidth">
-
-                          <thead>
-
-                            <tr>
-
-                              <th>#</th>
-                              <th>Section Name</th>
-                              <th>Grade Level</th>
-                              <th>Room</th>
-                              <th>Actions</th>
-
-                            </tr>
-
-                          </thead>
-
-                          <tbody>
-
-                            <tr >
-                              <td>1</td>
-                              <td>Section 1</td>
+                              <td>Ma</td>
+                              <td>Math</td>
+                              <td>3.0</td>
                               <td>Grade 1</td>
-                              <td>Room 1</td>
                               <td>
 
                                 <a class="button is-success is-outlined">
@@ -371,9 +223,10 @@
 
                             <tr>
                               <td>2</td>
-                              <td>Section 2</td>
-                              <td>Grade 2</td>
-                              <td>Room 2</td>
+                              <td>Ma</td>
+                              <td>Math</td>
+                              <td>3.0</td>
+                              <td>Grade 1</td>
                               <td>
 
                                 <a class="button is-success is-outlined">
@@ -393,9 +246,10 @@
 
                             <tr>
                               <td>3</td>
-                              <td>Section 3</td>
-                              <td>Grade 3</td>
-                              <td>Room 3</td>
+                              <td>Ma</td>
+                              <td>Math</td>
+                              <td>3.0</td>
+                              <td>Grade 1</td>
                               <td>
 
                                 <a class="button is-success is-outlined">
@@ -430,13 +284,10 @@
               </div>
 
             </div>
-
 
           </div>
 
         </div>
-
-
 
       </div>
 
