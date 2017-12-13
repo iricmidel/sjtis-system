@@ -111,7 +111,7 @@
 
                             <div class="field">
                               <div class="control">
-                                <input class="input" type="text" placeholder="Grade Level">
+                                <input id="gl_desc" class="input" type="text" placeholder="Grade Level">
                               </div>
                             </div>
 
@@ -119,7 +119,7 @@
 
                           <div class="column is-1"> <!--ADD BUTTON -->
 
-                            <a class="button is-outlined">
+                            <a class="button is-outlined" onclick="saveGradeLevel()">
                               <span class="icon is-small">
                                 <i class="fa fa-plus"></i>
                               </span>
@@ -157,67 +157,7 @@
 
                           </thead>
 
-                          <tbody>
-
-                            <tr >
-                              <td>1</td>
-                              <td>RM 201</td>
-                              <td>
-
-                                <a class="button is-success is-outlined">
-                                  <span class="icon is-small">
-                                    <i class="fa fa-pencil"></i>
-                                  </span>
-                                </a>
-
-                                <a class="button is-danger is-outlined">
-                                  <span class="icon is-small">
-                                    <i class="fa fa-trash"></i>
-                                  </span>
-                                </a>
-
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td>2</td>
-                              <td>RM 202</td>
-                              <td>
-
-                                <a class="button is-success is-outlined">
-                                  <span class="icon is-small">
-                                    <i class="fa fa-pencil"></i>
-                                  </span>
-                                </a>
-
-                                <a class="button is-danger is-outlined">
-                                  <span class="icon is-small">
-                                    <i class="fa fa-trash"></i>
-                                  </span>
-                                </a>
-
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td>3</td>
-                              <td>RM 203</td>
-                              <td>
-
-                                <a class="button is-success is-outlined">
-                                  <span class="icon is-small">
-                                    <i class="fa fa-pencil"></i>
-                                  </span>
-                                </a>
-
-                                <a class="button is-danger is-outlined">
-                                  <span class="icon is-small">
-                                    <i class="fa fa-trash"></i>
-                                  </span>
-                                </a>
-
-                              </td>
-                            </tr>
+                          <tbody id="load_gradelevel">
 
                           </tbody>
 
