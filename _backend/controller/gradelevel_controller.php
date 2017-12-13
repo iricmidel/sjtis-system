@@ -29,11 +29,6 @@
 
       break;
 
-    default:
-      # code...
-      break;
   }
 
-
-
- ?>
+?>
