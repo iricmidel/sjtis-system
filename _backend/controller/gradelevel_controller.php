@@ -14,6 +14,14 @@
 
       break;
 
+    case 2: //DELETE GRADE Level
+
+      $delete_gradelevel = new GradeLevelClass();
+      $delete_gradelevel->setGradeLevel_ID($_POST["id"]);
+      echo $delete_gradelevel->deleteGradeLevel();
+
+      break;
+
     case 4: //LOAD GRADE LEVEL TO TABLE
 
       $load_gradelevel = new GradeLevelClass();

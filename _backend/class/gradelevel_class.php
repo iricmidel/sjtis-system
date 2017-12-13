@@ -7,6 +7,7 @@
     private $gradelevel_id;
     private $gradelevel_desc;
 
+
     public function setGradeLevel_ID($id){
       $this->gradelevel_id = $this->clean_value($id);
     }
@@ -43,6 +44,7 @@
       }
 
     }
+
 
     public function saveGradeLevel(){
 
@@ -87,18 +89,18 @@
           echo '<td>'.($counter+1).'</td>';
           echo '<td>'.$row['gradelvlDesc'].'</td>';
           echo '<td>
+                  <a class="button is-success is-outlined">
+                    <span class="icon is-small">
+                      <i class="fa fa-pencil"></i>
+                    </span>
+                  </a>
 
-          <a class="button is-success is-outlined">
-              <span class="icon is-small">
-                <i class="fa fa-pencil"></i>
-              </span>
-            </a>
-
-            <a class="button is-danger is-outlined">
-              <span class="icon is-small">
-                <i class="fa fa-trash"></i>
-              </span>
-            </a></td>';
+                  <a class="button is-danger is-outlined" onclick="deleteGrade(\''.$row['gradelvlID'].'\')">
+                    <span class="icon is-small">
+                      <i class="fa fa-trash"></i>
+                    </span>
+                  </a>
+                </td>';
           echo '</tr>';
 
         }
@@ -106,6 +108,30 @@
       }
 
     }
+
+    public function deleteGradeLevel(){
+
+      include("../connection.php");
+
+      $sql = $con->prepare("UPDATE tblgradelevel
+                            SET gradelvlStatus = 0
+                            WHERE gradelvlID = ?");
+
+      $sql->bind_param("s",$this->gradelevel_id);
+
+      if($sql->execute() == TRUE){
+
+        return 1;
+
+      }
+      else {
+
+        return 0;
+
+      }
+
+    }
+
 
     private function clean_value($value){
 
