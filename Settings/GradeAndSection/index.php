@@ -196,7 +196,7 @@
                         <label class="label">Section Name</label>
 
                         <div class="control">
-                          <input class="input" type="text" placeholder="Section Name">
+                          <input id="sec_name" class="input" type="text" placeholder="Section Name">
                         </div>
 
                       </div>
@@ -210,7 +210,7 @@
                         <label class="label">Room Name</label>
 
                         <div class="control">
-                          <input class="input" type="text" placeholder="Room Name">
+                          <input id="rm_name" class="input" type="text" placeholder="Room Name">
                         </div>
 
                       </div>
@@ -234,7 +234,7 @@
                             <div class="field">
                               <div class="control">
                                 <div class="select is-fullwidth">
-                                  <select>
+                                  <select id="load_gl_option">
                                     <option>Grade 1</option>
                                     <option>Grade 2</option>
                                     <option>Grade 3</option>
@@ -247,7 +247,7 @@
 
                           <div class="column is-1"> <!--ADD BUTTON -->
 
-                            <a class="button is-outlined">
+                            <a class="button is-outlined" onclick="saveSection()">
                               <span class="icon is-small">
                                 <i class="fa fa-plus"></i>
                               </span>

@@ -29,6 +29,11 @@
 
       break;
 
+    case 5: //LOAD GRADE LEVEL TO OPTION
+
+      $load_gradelevel_option = new GradeLevelClass();
+      echo $load_gradelevel_option->loadGradeLevelOption();
+
   }
 
 ?>

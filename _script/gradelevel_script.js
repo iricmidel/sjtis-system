@@ -1,5 +1,12 @@
 
-  window.onload = loadGradeLevel();
+  window.onload = load_all_gradelevel();
+
+  function load_all_gradelevel(){
+
+    loadGradeLevel();
+    loadGradeLevelOption();
+
+  }
 
   function saveGradeLevel(){
 
@@ -16,7 +23,7 @@
 
           if($.trim(result) == 1){
 
-            loadGradeLevel();
+            load_all_gradelevel();
 
           }
           else{
@@ -43,6 +50,23 @@
       success: function(result){
 
         $("#load_gradelevel").html(result);
+
+      }
+
+    });
+
+  }
+
+  function loadGradeLevelOption(){
+
+    $.ajax({
+
+      url: "../../_backend/controller/gradelevel_controller.php",
+      type: "POST",
+      data: {func: 5},
+      success: function(result){
+
+        $("#load_gl_option").html(result);
 
       }
 

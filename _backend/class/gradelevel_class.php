@@ -109,6 +109,27 @@
 
     }
 
+    public function loadGradeLevelOption(){
+
+      include("../connection.php");
+
+      $sql="SELECT * FROM tblgradelevel WHERE gradelvlStatus = 1
+            ORDER BY gradelvlDesc";
+
+      $result = $con->query($sql);
+
+      if($result->num_rows > 0){
+
+        while($row = $result->fetch_assoc()){
+
+          echo "<option value=\"".$row['gradelvlID']."\">".$row['gradelvlDesc']."</option>";
+
+        }
+
+      }
+
+    }
+
     public function deleteGradeLevel(){
 
       include("../connection.php");
