@@ -289,72 +289,7 @@
 
                           <tbody id="load_section">
 
-                            <tr >
-                              <td>1</td>
-                              <td>Section 1</td>
-                              <td>Grade 1</td>
-                              <td>Room 1</td>
-                              <td>
-
-                                <a class="button is-success is-outlined">
-                                  <span class="icon is-small">
-                                    <i class="fa fa-pencil"></i>
-                                  </span>
-                                </a>
-
-                                <a class="button is-danger is-outlined">
-                                  <span class="icon is-small">
-                                    <i class="fa fa-trash"></i>
-                                  </span>
-                                </a>
-
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td>2</td>
-                              <td>Section 2</td>
-                              <td>Grade 2</td>
-                              <td>Room 2</td>
-                              <td>
-
-                                <a class="button is-success is-outlined">
-                                  <span class="icon is-small">
-                                    <i class="fa fa-pencil"></i>
-                                  </span>
-                                </a>
-
-                                <a class="button is-danger is-outlined">
-                                  <span class="icon is-small">
-                                    <i class="fa fa-trash"></i>
-                                  </span>
-                                </a>
-
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td>3</td>
-                              <td>Section 3</td>
-                              <td>Grade 3</td>
-                              <td>Room 3</td>
-                              <td>
-
-                                <a class="button is-success is-outlined">
-                                  <span class="icon is-small">
-                                    <i class="fa fa-pencil"></i>
-                                  </span>
-                                </a>
-
-                                <a class="button is-danger is-outlined">
-                                  <span class="icon is-small">
-                                    <i class="fa fa-trash"></i>
-                                  </span>
-                                </a>
-
-                              </td>
-                            </tr>
-
+                        
                           </tbody>
 
                         </table>

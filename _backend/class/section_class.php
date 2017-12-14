@@ -41,14 +41,14 @@
 
           $hold = explode("-",$row['sectionID']);
           $id = $hold[1]+1;
-          $this->section_id = "Sec-".$id;
+          $this->section_id = "SEC-".$id;
 
         }
 
       }
       else {
 
-        $this->section_id = "Sec-100";
+        $this->section_id = "SEC-100";
 
       }
 

@@ -105,7 +105,7 @@
                       <div class="field">
                         <label class="label">Subject Code</label>
                         <div class="control">
-                          <input class="input" type="text" placeholder="Subject Code">
+                          <input id="subj_code" class="input" type="text" placeholder="Subject Code">
                         </div>
                       </div>
 
@@ -116,7 +116,7 @@
                       <div class="field">
                         <label class="label">Subject Description</label>
                         <div class="control">
-                          <input class="input" type="text" placeholder="Subject Description">
+                          <input id="subj_desc" class="input" type="text" placeholder="Subject Description">
                         </div>
                       </div>
 
@@ -127,7 +127,7 @@
                       <div class="field">
                         <label class="label">Units</label>
                         <div class="control">
-                          <input class="input" type="text" placeholder="Units">
+                          <input id="subj_unit" class="input" type="text" placeholder="Units">
                         </div>
                       </div>
 
@@ -145,10 +145,8 @@
 
                             <div class="control">
                               <div class="select is-fullwidth">
-                                <select>
-                                  <option selected>Grade 1</option>
-                                  <option>Grade 2</option>
-                                  <option>Grade 3</option>
+                                <select id="load_gl_option">
+
                                 </select>
                               </div>
                             </div>
@@ -157,7 +155,7 @@
 
                           <div class="column is-1"> <!--ADD BUTTON -->
 
-                            <a class="button is-outlined">
+                            <a class="button is-outlined" onclick="saveSubject()">
                               <span class="icon is-small">
                                 <i class="fa fa-plus"></i>
                               </span>
@@ -198,7 +196,7 @@
 
                           </thead>
 
-                          <tbody>
+                          <tbody id="load_subj_table">
 
                             <tr >
                               <td>1</td>
@@ -295,6 +293,7 @@
 
     </div>
 
+    <script src="../../_script/subject_script.js"></script>
 
   </body>
 
