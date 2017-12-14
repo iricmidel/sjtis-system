@@ -1,4 +1,6 @@
 
+  window.onload = loadSection();
+
   function saveSection(){
 
     var name = $("#sec_name").val();
@@ -18,8 +20,55 @@
 
           if($.trim(result) == 1){
 
-            //load_all_gradelevel();
-            alert("saved");
+            loadSection();
+
+          }
+          else{
+
+            alert("error occured!");
+
+          }
+
+        }
+
+      });
+
+    }
+
+  }
+
+  function loadSection(){
+
+    $.ajax({
+
+      url: "../../_backend/controller/section_controller.php",
+      type: "POST",
+      data: {func: 4},
+      success: function(result){
+
+        $("#load_section").html(result);
+
+      }
+
+    });
+
+
+  }
+
+  function deleteSection(id){
+
+    if(confirm("Are you sure you want to delete this section?")){
+
+      $.ajax({
+
+        url: "../../_backend/controller/section_controller.php",
+        type: "POST",
+        data: {func: 2, id: id},
+        success: function(result){
+
+          if($.trim(result) == 1){
+          
+            loadSection();
 
           }
           else{

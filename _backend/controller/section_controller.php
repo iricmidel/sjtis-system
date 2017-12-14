@@ -15,6 +15,21 @@
 
       break;
 
+    case 2: //DELETE SECTION
+
+      $delete_section = new SectionClass();
+      $delete_section->setSection_ID($_POST["id"]);
+      echo $delete_section->deleteSection();
+
+      break;
+
+    case 4: //LOAD SECTION TO TABLE
+
+      $load_section = new SectionClass();
+      echo $load_section->loadSection();
+
+      break;
+
   }
 
 ?>

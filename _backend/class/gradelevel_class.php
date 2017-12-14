@@ -72,12 +72,12 @@
 
     public function loadGradeLevel(){
 
-      $counter = 0;
+      $counter = 1;
 
       include("../connection.php");
 
       $sql="SELECT * FROM tblgradelevel WHERE gradelvlStatus = 1
-            ORDER BY gradelvlDesc";
+            ORDER BY gradelvlDesc ASC";
 
       $result = $con->query($sql);
 
@@ -86,7 +86,7 @@
         while($row = $result->fetch_assoc()){
 
           echo '<tr>';
-          echo '<td>'.($counter+1).'</td>';
+          echo '<td>'.($counter++).'</td>';
           echo '<td>'.$row['gradelvlDesc'].'</td>';
           echo '<td>
                   <a class="button is-success is-outlined">

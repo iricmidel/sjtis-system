@@ -287,7 +287,7 @@
 
                           </thead>
 
-                          <tbody>
+                          <tbody id="load_section">
 
                             <tr >
                               <td>1</td>
