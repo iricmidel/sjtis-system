@@ -30,6 +30,14 @@
 
       break;
 
+    case 5: //LOAD SECTION TO option
+
+      $load_section = new SectionClass();
+      $load_section->setGradeLevel_ID($_POST['id']);
+      echo $load_section->loadSectionOption();
+
+      break;
+
   }
 
 ?>

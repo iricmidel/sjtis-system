@@ -10,6 +10,8 @@
   <!-- Bulma Version 0.6.0 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" integrity="sha256-HEtF7HLJZSC3Le1HcsWbz1hDYFPZCqDhZa9QsCgVUdw=" crossorigin="anonymous" />
   <link rel="stylesheet" type="text/css" href="../css/admin.css">
+  <script src="../../Libraries/ajax-3.1.1.js"></script>
+  <script src="../../Libraries/jquery-1.12.4.js"></script>
 </head>
 <body>
 
@@ -54,7 +56,8 @@
   <!-- END NAV -->
   <div class="container">
     <div class="columns">
-      <div class="column is-3">
+
+      <div class="column is-3"><!-- SIDEBAR -->
         <aside class="menu">
           <p class="menu-label">
             Admission
@@ -66,110 +69,116 @@
           </ul>
         </aside>
       </div>
+
       <div class="column is-9">
-        <div class="field">
+
+        <div class="fields">
+          <label class="label">School Year</label>
+          <div class="control">
+            <input id="sy_yr" class="input" type="text" placeholder="####-####" readonly>
+          </div>
+        </div>
+        <!--
+        <div class="fields">
           <label class="label">Student Number</label>
           <div class="control">
-          <input class="input" type="text" placeholder="100000">
+            <input id="s_num" class="input" type="text" placeholder="##-####" readonly>
           </div>
-          </div>
-
-          <div class="field">
+        </div>
+      -->
+        <div class="field">
           <label class="label">Student Name</label>
           <div class="control">
-          <input class="input" type="text" placeholder="FirstName LastName">
+            <input id="s_name" class="input" type="text" placeholder="FirstName LastName">
           </div>
-          </div>
+        </div>
 
-          <div class="field">
+        <div class="field">
           <label class="label">Gender</label>
           <div class="control">
-          <div class="select">
-            <select>
-              <option>Male</option>
-              <option>Female</option>
-            </select>
+            <div class="select">
+              <select id="s_gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
           </div>
-          </div>
-          </div>
+        </div>
 
-
-          <div class="field">
+        <div class="field">
           <label class="label">Birthdate</label>
           <div class="control">
-          <input class="input" type="date" placeholder="">
+            <input id="s_dob" class="input" type="date" placeholder="">
           </div>
+        </div>
+
+          <div class="field">
+            <label class="label">Birthplace</label>
+            <div class="control">
+              <input id="s_pob" class="input" type="text" placeholder="Birthplace">
+            </div>
           </div>
 
           <div class="field">
-          <label class="label">Birthplace</label>
-          <div class="control">
-          <input class="input" type="text" placeholder="Birthplace">
-          </div>
-          </div>
-
-          <div class="field">
-          <label class="label">Parents</label>
-          <div class="control">
-          <input class="input" type="text" placeholder="Parents">
-          </div>
+            <label class="label">Parent/Guardian</label>
+            <div class="control">
+              <input id="s_guardian" class="input" type="text" placeholder="Parents">
+            </div>
           </div>
 
           <div class="field">
-          <label class="label">Occupation</label>
-          <div class="control">
-          <input class="input" type="text" placeholder="Occupation">
-          </div>
-          </div>
-
-          <div class="field">
-          <label class="label">Address</label>
-          <div class="control">
-          <input class="input" type="text" placeholder="Address">
-          </div>
+            <label class="label">Occupation</label>
+            <div class="control">
+              <input id="s_occupation" class="input" type="text" placeholder="Occupation">
+            </div>
           </div>
 
           <div class="field">
-          <label class="label">Contact Number</label>
-          <div class="control">
-          <input class="input" type="text" placeholder="Contact Number">
-          </div>
-          </div>
-
-          <div class="field">
-          <label class="label">Grade Level</label>
-          <div class="control">
-          <div class="select">
-            <select>
-              <option>Select dropdown</option>
-              <option>With options</option>
-            </select>
-          </div>
-          </div>
+            <label class="label">Address</label>
+            <div class="control">
+              <input id="s_address" class="input" type="text" placeholder="Address">
+            </div>
           </div>
 
           <div class="field">
-          <label class="label">Class Section</label>
-          <div class="control">
-          <div class="select">
-            <select>
-              <option>Select dropdown</option>
-              <option>With options</option>
-            </select>
-          </div>
-          </div>
+            <label class="label">Contact Number</label>
+            <div class="control">
+              <input id="s_contact" class="input" type="text" placeholder="Contact Number">
+            </div>
           </div>
 
           <div class="field">
-          <label class="label">Other Information</label>
-          <div class="control">
-          <textarea class="textarea" placeholder="Other Information"></textarea>
+            <label class="label">Grade Level</label>
+            <div class="control">
+              <div class="select">
+                <select id="s_grade_level" onchange="myScript">
+                  <!-- LOAD GRADE LEVEL -->
+                </select>
+              </div>
+            </div>
           </div>
+
+          <div class="field">
+            <label class="label">Class Section</label>
+            <div class="control">
+              <div class="select">
+                <select id="s_section">
+                  <!-- LOAD SECTION -->
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Other Information</label>
+            <div class="control">
+              <textarea id="s_info" class="textarea" placeholder="Other Information"></textarea>
+            </div>
           </div>
 
           <div class="field is-grouped">
           <div class="control">
-          <button class="button is-link">Submit</button>
+          <button class="button is-link" onclick="enrollNewStudent()">Submit</button>
           </div>
           <div class="control">
           <button class="button is-text">Cancel</button>
@@ -181,6 +190,9 @@
       </div>
     </div>
   </div>
-  <script async type="text/javascript" src="../js/bulma.js"></script>
+
+  <!-- <script async type="text/javascript" src="../js/bulma.js"></script> -->
+  <script src="../../_script/enroll_new_student_script.js"></script>
+
 </body>
 </html>

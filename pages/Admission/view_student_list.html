@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,8 +10,9 @@
   <!-- Bulma Version 0.6.0 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" integrity="sha256-HEtF7HLJZSC3Le1HcsWbz1hDYFPZCqDhZa9QsCgVUdw=" crossorigin="anonymous" />
   <link rel="stylesheet" type="text/css" href="../css/admin.css">
+  <script src="../../Libraries/ajax-3.1.1.js"></script>
+  <script src="../../Libraries/jquery-1.12.4.js"></script>
 </head>
-
 <body>
 
   <!-- START NAV -->
@@ -54,7 +54,6 @@
     </div>
   </nav>
   <!-- END NAV -->
-
   <div class="container">
 
     <div class="columns">
@@ -110,23 +109,30 @@
           </div>
         </section>
 
-          <div class="column">
-            <div class="card events-card">
-              <header class="card-header">
-                <p class="card-header-title">
-                  Students
-                </p>
-                <a href="#" class="card-header-icon" aria-label="more options">
-                  <span class="icon">
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                  </span>
-                </a>
-              </header>
-              <div class="card-table">
+        <div class="column">
+
+          <div class="card events-card">
+
+            <header class="card-header">
+              <p class="card-header-title">
+                Students
+              </p>
+              <a href="#" class="card-header-icon" aria-label="more options">
+                <span class="icon">
+                  <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </a>
+            </header>
+
+            <div class="card-table">
+
               <div class="card-content">
+
                 <div class="content">
+
                   <div class="columns">
-                    <div class="column is-6">
+
+                    <div class="column">
                       <div class="control has-icons-left has-icons-right">
                         <input class="input is-small" type="text" placeholder="Search Student">
                         <span class="icon is-medium is-left">
@@ -137,6 +143,7 @@
                         </span>
                       </div>
                     </div>
+
                     <div class="column">
                       <div class="field">
                         <p class="control has-icons-left">
@@ -171,33 +178,50 @@
                       </div>
                     </div>
 
-                </div>
+                    <div class="column">
+                      <div class="field">
+                        <p class="control has-icons-left">
+                          <span class="select is-small">
+                            <select>
+                              <option selected>SY 2017-2018</option>
+                            </select>
+                          </span>
+                          <span class="icon is-small is-left">
+                            <i class="fa fa-globe"></i>
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+
+                  </div>
+
                 </div>
               </div>
-                <div class="content">
-                  <table class="table is-fullwidth is-striped">
-                    <tbody>
-                      <tr>
-                        <td width="5%"><i class="fa fa-user"></i></td>
-                        <td><a>FirstName LastName</a></td>
-                        <td>Grade Level</td>
-                        <td>Section</td>
-                        <td><a class="button is-small is-primary" href="#">Edit</a> <a class="button is-small is-danger" href="#">Delete</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+
+              <div class="content"> <!-- TABLE -->
+                <table class="table is-fullwidth is-striped">
+                  <tbody id="load_student_list">
+
+                  </tbody>
+                </table>
               </div>
-              <footer class="card-footer">
-                <a href="#" class="card-footer-item">View All</a>
-              </footer>
+
             </div>
+            <footer class="card-footer">
+              <a href="#" class="card-footer-item">View All</a>
+            </footer>
           </div>
+        </div>
 
         </div>
-      </div>
+
     </div>
+
   </div>
+
+  <script type="text/javascript" src="../../_script/student_list_script.js"></script>
+
   <script async type="text/javascript" src="../js/bulma.js"></script>
+
 </body>
 </html>

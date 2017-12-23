@@ -52,7 +52,6 @@
 
     });
 
-
   }
 
   function deleteSection(id){
@@ -67,7 +66,7 @@
         success: function(result){
 
           if($.trim(result) == 1){
-          
+
             loadSection();
 
           }

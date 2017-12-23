@@ -79,6 +79,29 @@
 
     }
 
+    public function deleteSection(){
+
+      include("../connection.php");
+
+      $sql = $con->prepare("UPDATE tblsection
+                            SET sectionStatus = 0
+                            WHERE sectionID = ?");
+
+      $sql->bind_param("s",$this->section_id);
+
+      if($sql->execute() == TRUE){
+
+        return 1;
+
+      }
+      else {
+
+        return 0;
+
+      }
+
+    }
+
     public function loadSection(){
 
       $counter = 1;
@@ -125,29 +148,27 @@
 
     }
 
-    public function deleteSection(){
+    public function loadSectionOption(){
 
       include("../connection.php");
 
-      $sql = $con->prepare("UPDATE tblsection
-                            SET sectionStatus = 0
-                            WHERE sectionID = ?");
+      $sql = "SELECT * FROM tblsection
+              WHERE gradelvlID = '$this->gradelevel_id'
+              AND sectionStatus = 1";
 
-      $sql->bind_param("s",$this->section_id);
+      $result = $con->query($sql);
 
-      if($sql->execute() == TRUE){
+      if($result->num_rows > 0){
 
-        return 1;
+        while($row = $result->fetch_assoc()){
 
-      }
-      else {
+          echo "<option value=\"".$row['sectionID']."\">".$row['sectionName']."</option>";
 
-        return 0;
+        }
 
       }
 
     }
-
 
     private function clean_value($value){
 
