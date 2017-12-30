@@ -19,12 +19,12 @@ function loadStudentList(){
       $("#grade_section").html(data[2]);
       $("#student_age").html(data[3]);
       $("#student_dob").html(data[4]);
-      $("#student_address").html(data[5]);
-      $("#student_guardian").html(data[6]);
-      $("#student_contact").html(data[7]);
-      $("#student_gender").html(data[8]);
-      $("#student_date_entered").html(data[9]);
-      $("#student_pob").html(data[10]);
+      $("#student_pob").html(data[5]);
+      $("#student_address").html(data[6]);
+      $("#student_guardian").html(data[7]);
+      $("#student_contact").html(data[8]);
+      $("#student_gender").html(data[9]);
+      $("#student_date_entered").html(data[10]);
       $("#student_occupation").html(data[11]);
 
     }

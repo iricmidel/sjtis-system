@@ -183,7 +183,7 @@
                   $row['studentPoB']."=".$row['studentAddress']."=".
                   $row['studentGuardian']."=".$row['studentContactNumber']."=".
                   $row['studentGender']."=".$row['studentDateEntered']."=".
-                  $row['studentPoB']."=".$row['studentOccupation'];
+                  $row['studentOccupation'];
 
         }
 
